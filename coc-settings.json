@@ -1,0 +1,4 @@
+{
+  "rust-analyzer.server.extraEnv": { "RUSTUP_TOOLCHAIN": "stable" },
+  "rust-analyzer.serverPath": "/Users/alexpikalov/.cargo/bin/rust-analyzer" 
+}
