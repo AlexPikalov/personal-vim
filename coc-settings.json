@@ -1,4 +1,18 @@
 {
   "rust-analyzer.server.extraEnv": { "RUSTUP_TOOLCHAIN": "stable" },
-  "rust-analyzer.serverPath": "/Users/alexpikalov/.cargo/bin/rust-analyzer" 
+  "rust-analyzer.serverPath": "/home/oleksandr/.cargo/bin/rust-analyzer",
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.enable": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact",
+    "json",
+    "graphql",
+    "markdown"
+  ]
 }
