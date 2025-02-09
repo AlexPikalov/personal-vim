@@ -1,7 +1,10 @@
-lang en_US
+" lang en_US
 
 syntax enable
-filetype plugin indent on
+" filetype plugin indent on
+set expandtab
+set tabstop=2
+set shiftwidth=2
 set number relativenumber
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -14,6 +17,10 @@ call plug#begin()
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'preservim/nerdtree'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'pangloss/vim-javascript'    " JavaScript support
+  Plug 'leafgarland/typescript-vim' " TypeScript syntax
+  Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+  Plug 'jparise/vim-graphql'        " GraphQL syntax
 call plug#end()
 
 set termguicolors     " enable true colors support
@@ -184,3 +191,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-tsserver']
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
